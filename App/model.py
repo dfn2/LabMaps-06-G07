@@ -265,8 +265,8 @@ def addBookTag(catalog, tag):
             lt.addLast(tagbook['value']['books'], book['value'])
 
 
-def addBookTitle(catalog, title):
-    # TODO lab 6, agregar el libro al map de titulos
+def addBookTitle(catalog, book):
+    # TODO lab 6, agregar el libro al map de titulos originales
     """
     Completar la descripcion de addBookTitle
     """
