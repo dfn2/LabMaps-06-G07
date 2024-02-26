@@ -164,8 +164,6 @@ while True:
 
     elif int(inputs[0]) == 6:
         # TODO lab 6, conectar con las funciones del controlador e imprimir
-        # controller.getBooksByTitle(ctrlr, title)
-        # controller.titleSize(ctrlr)
         pass
 
     elif int(inputs[0]) == 0:
