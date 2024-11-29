@@ -58,3 +58,31 @@ def bfs_vertex(search, graph, source):
                 search['visited'].add(w)
                 search['edges'].setdefault(vertex, []).append(w)
     return search
+#de clase
+def bfs_vertex(search, graph, source):
+    cola = q.new_queue()
+    q.enqueue(cola, source)
+    while not q.is_empty(cola):
+        vertex = q.dequeue(cola)
+        lst_ady = mapa.get(graph["vertices"], vertex)
+        for i in range(t.size(lst_ady)):
+            arco = t.get_element(lst_ady, i)
+            W = e.other(arco, vertex)
+            marca = mapa.get(search["visited"], W)
+            if marca is None:
+                q.enqueue(cola, W)
+                mapa.put(search["visited"], W, {
+                    "marked": True,
+                    "edge_to": vertex,
+                    "dist_to": distancia
+                })
+    if marca is None:
+        q.enqueue(cola, W)
+        mapa.put(search["visited"], W, {
+            "marked": True,
+            "edge_to": vertex,
+            "dist_to": distancia
+    })
+
+    marca_vertex = mapa.get(search["visited"], vertex)
+    dist_to_vertex = marca_vertex["dist_to"]
